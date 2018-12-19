@@ -28,6 +28,7 @@
         password: "{{ foreman_password }}"
         force_basic_auth: yes
         body_format: json
+        validate_certs: no
       register: scapcontents
 
     - name: Build Scap content parameters
