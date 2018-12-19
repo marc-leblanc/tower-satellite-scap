@@ -8,7 +8,7 @@
       yum:
         name: "rubygem-foreman_scap_client"
         enablerepo: "rhel-{{ ansible_distribution_major_version }}-server-satellite-tools-{{ satellite_version }}-rpms"
-        state: latest
+        state: present
 
     - name: Update /etc/foreman_scap_client/config.yaml
       template:
