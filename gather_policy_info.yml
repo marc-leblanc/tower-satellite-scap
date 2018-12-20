@@ -19,7 +19,9 @@
         policy: "{{ item }}"
       with_items: "{{ policies.json.results }}"
       when: item.name == policy_name
-
+    - name: Debug policy name
+      debug:
+        msg: "Policy name {{ policy_name }}"
     - name: Get scap content information
       uri:
         url: https://{{ foreman_server }}/api/v2/compliance/scap_contents/{{ policy.scap_content_id }}
