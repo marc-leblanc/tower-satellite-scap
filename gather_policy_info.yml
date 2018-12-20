@@ -22,7 +22,7 @@
     - name: Debug json results
       debug:
         msg: "item.name = {{ item.name }}"
-      with_items: "{{ policies.json.rsults }}"
+      with_items: "{{ policies.json.results }}"
 
     - name: Debug policy name
       debug:
