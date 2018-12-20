@@ -23,6 +23,7 @@
       debug:
         msg: "|| item.name = {{ item.name }} ||"
       with_items: "{{ policies.json.results }}"
+      when: item.name == policy_name
 
     - name: Debug policy name
       debug:
