@@ -19,7 +19,7 @@
 # policy (key is id as in Foreman)
 
 {{ hostvars['localhost']['policy']['id'] }}:
-  :profile: '{{ hostvars['localhost']['scapcontents'] }}'
+  :profile: '{{ hostvars['localhost']['scap_content'] }}'
   :content_path: '/var/lib/openscap/content/{{ hostvars['localhost']['scapcontents'].json.digest }}.xml'
   # Download path
   # A path to download SCAP content from proxy
