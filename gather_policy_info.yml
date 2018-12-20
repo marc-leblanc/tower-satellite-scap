@@ -41,4 +41,4 @@
         msg: "scapcontent {{ scapcontents.json.scap_content_profiles }}"
     - name: Debug scap_profile_id
       debug:
-        msg: "profile id {{ scap_content_profile_id }}"
+        msg: "profile id {{ policy.scap_content_profile_id }}"
