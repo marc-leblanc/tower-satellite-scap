@@ -38,4 +38,4 @@
       when: item.id == policy.scap_content_profile_id
     - name: Debug
       debug: 
-        msg: "scapcontent {{ scap_content }}"
+        msg: "scapcontent {{ scapcontents.json.scap_content_profiles }}"
