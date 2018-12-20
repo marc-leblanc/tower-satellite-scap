@@ -36,5 +36,6 @@
         scap_content: "{{ item.profile_id }}"
       with_items: "{{ scapcontents.json.scap_content_profiles }}"
       when: item.id == policy.scap_content_profile_id
+    - name: Debug
       debug: 
         msg: "scapcontent {{ scap_content }}"
