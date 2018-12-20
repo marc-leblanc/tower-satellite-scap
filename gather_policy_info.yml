@@ -19,6 +19,11 @@
         policy: "{{ item }}"
       with_items: "{{ policies.json.results }}"
       when: item.name == policy_name
+    - name: Debug json results
+      debug:
+        msg: "item.name = {{ item.name }}"
+      with_items: "{{ policies.json.rsults }}"
+
     - name: Debug policy name
       debug:
         msg: "Policy name {{ policy_name }}"
