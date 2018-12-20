@@ -21,7 +21,7 @@
       when: item.name == policy_name
     - name: Debug json results
       debug:
-        msg: "item.name = {{ item.name }}"
+        msg: "|| item.name = {{ item.name }} ||"
       with_items: "{{ policies.json.results }}"
 
     - name: Debug policy name
